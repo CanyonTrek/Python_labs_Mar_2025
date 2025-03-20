@@ -5,6 +5,7 @@
 """
     Docstring:
 """
+import sys
 movies = { 'rohit': ['internal affairs', 'inside out', 'death at a funeral'],
            'david': ['borat', 'grimsby', 'dictator'],
            'donald': ['lotr', 'the hobbit', 'brave'],
@@ -17,8 +18,9 @@ fh_out = open(file, mode="wt")
 
 # ITERATE through movies dict and WRITE key+values to FILE.
 for name in movies.keys():
-    print(f"{name}: {movies[name]}", end="\n")
-    fh_out.write(f"{name}: {movies[name]}\n")
+    print(f"{name}: {movies[name]}", end="\n", file=sys.stdout)
+    print(f"{name}: {movies[name]}", end="\n", file=fh_out)
+    # fh_out.write(f"{name}: {movies[name]}\n")
 
 # fh_out.flush() # Manually flush buffers
 fh_out.close() # Flush buffers and close file handle.
