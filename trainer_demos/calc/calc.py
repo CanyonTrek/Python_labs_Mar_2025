@@ -21,11 +21,11 @@ def main():
         """
         print(menu)
         option = input("Enter option 1-2,q=quit: ")
-        if option == 1:
+        if option == "1":
             print(f"50 + 40 + 30 = {add(50, 40, 30)}")
             print(f"50 * 40 = {mul(50, 40)}")
             print(f"50 / 40 = {div(50, 40)}")
-        elif option == 2:
+        elif option == "2":
             print(f"50 % 40 = {adv.mod(50, 40)}")
             print(f"50 ** 40 = {adv.power(50, 40)}")
             print(f"\N{square root}50 = {adv.sqrt(50)}")
